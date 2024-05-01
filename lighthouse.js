@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
   arrow.addEventListener('mouseover', function() {
       hoverSound12.play();
   });
-
+ 
   arrow.addEventListener('mouseleave', function() {
       hoverSound12.pause();
       hoverSound12.currentTime = 0;
