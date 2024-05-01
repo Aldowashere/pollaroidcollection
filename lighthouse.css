@@ -1,0 +1,336 @@
+:root{
+
+    --nevada: #627579;
+    --iron: #d1d7d7;
+    --dune: #372E2D;
+    --tower: #ACBBBE;
+
+    /*
+    font-family: 'Homemade Apple', cursive; 
+    */
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(var(--tower), var(--nevada));
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    
+}
+
+
+.loading{
+    width: 100%;
+    height: 200vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+.loading-two{
+    width: 100%;
+    height: 200vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient( black, var(--nevada));
+
+
+}
+.gif{
+    border: 5px white solid;
+    border-radius: 100%;
+    width: 450px;
+    height: 450px;
+    margin-top: -100vh;
+}
+.arrow{
+    width: 100px;
+    transform-origin: 50% 50%;
+    animation: arrow .5s linear alternate infinite;
+    
+
+}
+.author{
+    background-color: var(--nevada);
+    margin: 0 0 5px 0;
+    font-size: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: static;
+    max-height: 11px;
+}
+.author a{
+    font-family: 'Courier New', Courier, monospace
+}
+
+.message{
+    display: none;
+}
+
+header{
+    background-color: var(--iron);
+    margin: auto 200px;
+    padding: 5px 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px 0px 220px 20px;
+    height: 40px;
+    min-width: 100px;
+}
+header .logo{
+    font-family: 'Homemade Apple', cursive; 
+    text-decoration: none;
+    color: var(--dune);
+    font-size: 20px;
+}
+header ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header li, a{
+    font-family: 'Homemade Apple', cursive;
+    color: var(--dune);
+    margin: 2px 20px;
+    list-style: none;
+    text-decoration: none;
+}
+
+.view-icon , .stuff{
+    display: none;
+}
+
+.flex-deck{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 25px;
+    gap: 20px;
+}
+
+.card{
+    border-radius: 5px;
+    overflow: hidden;
+    min-height: 300px;
+    min-width: 294px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    font-family: 'Liu Jian Mao Cao', cursive;
+    font-size: 1.2rem;
+    padding-top: 10px;
+    transform: rotate(-2deg);
+    filter: sepia(100%);
+}
+
+.card img{
+    max-height: 200px;
+    max-width: 274px;
+    min-height: 200px;
+    min-width: 274px;
+    object-fit: cover;
+}
+
+.flex-deck.column-direction {
+    flex-direction: column;
+  }
+
+#faro, #hood{
+    object-fit: cover;
+    object-position: 100% -30px;
+}
+#laj{
+   object-position: 100% -80px;
+}
+
+.card.large {
+    min-height: 600px;
+    min-width: 588px;
+    font-size: 2.4rem;
+  }
+  
+  .card.large img {
+    max-height: 400px;
+    max-width: 548px;
+    min-height: 400px;
+    min-width: 548px;
+  }
+
+/* Animations Wizard Stuff*/
+
+@keyframes arrow {
+    0%   {transform: translate3d(0,0,0) scale3d(1,1,1);}
+    40%  {transform: translate3d(0,20%,0) scale3d(1,1,1);}
+    100% {transform: translate3d(0,30%,0) scale3d(1,0.9,1);}
+}
+
+
+/* Animations Basic Effects */
+
+.author-links ul a:hover{
+    color: white;
+}
+
+.card:hover{
+    animation-name: card-hover;
+    transition: 0.5s;
+    transform: none;
+    filter: none;
+}
+
+.change-view a:hover{
+    color: white;
+    transition: 0.3s
+}
+.back a:hover{
+    color: white;
+    transition: 0.3s
+} 
+
+/* Responsive 1705 */
+
+@media screen and (max-width: 1705px) {
+
+    header .logo{
+        min-width: 600px;
+        font-size: 20px;
+    }
+
+    header li{
+        min-width: fit-content;
+    }
+    
+  }
+
+  
+/* Responsive 1590 */
+
+@media screen and (max-width: 1590px) {
+    .view-icon, .stuff{
+        display: flex;
+        width: 30px;
+    }
+    .back, .change-view{
+        display: none;
+    }
+    .right-bar{
+        display: flex;
+        gap: 20px;
+    }
+    .author {
+        display: flex;
+        letter-spacing: 1px;
+        font-size: 7px;
+        flex-direction: column;
+        margin-bottom: 10px;
+        padding-top: 5px;
+      }
+      
+  }
+
+  /* Responsive 1290 */
+
+@media screen and (max-width: 1290px) {
+    header .logo{
+        font-size: 14px;
+        margin: auto;
+        width: 300px;
+        min-width: 400px;
+    }
+    header{
+        margin: auto 200px;
+    }
+    header ul{
+        padding: 0%;
+        margin: auto 40px;
+    }
+    .author {
+        display: flex;
+        letter-spacing: 1px;
+        font-size: 7px;
+        flex-direction: column;
+        margin-bottom: 10px;
+        padding-top: 5px;
+      }
+      
+  }
+
+ /* Responsive 1020 */
+
+@media screen and (max-width: 1020px) {
+    header{
+        width: fit-content;
+        margin: auto;
+        height: 25px;
+        border-radius: 1px;
+   
+    }
+    header ul{
+        margin: 0;
+    }
+    header .logo{
+        min-width: 260px;
+        width: 200px;
+        font-size: 14px;
+        
+    }
+    .author {
+        display: flex;
+        letter-spacing: 1px;
+        font-size: 7px;
+        flex-direction: column;
+        margin-bottom: 10px;
+        padding-top: 5px;
+      }
+      
+  }
+
+
+
+  /* Responsive 420 */
+  @media screen and (max-width: 420px) {
+    .author {
+      display: flex;
+      letter-spacing: 1px;
+      font-size: 7px;
+      flex-direction: column;
+      margin-bottom: 10px;
+      padding-top: 5px;
+    }
+    header {
+        margin-top:  10px;
+        padding: 20px;
+        min-height: auto;
+        min-width: none;
+        
+    
+       
+    }
+    header .logo{
+        font-size: 14px;
+        min-height: auto;
+        min-width: none;
+    }
+    .stuff,.view-icon{
+        width: 15px;
+        min-height: auto;
+        min-width: none;
+    }
+  }
+
+  
+
